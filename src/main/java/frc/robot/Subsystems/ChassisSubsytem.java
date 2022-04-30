@@ -42,6 +42,10 @@ public class ChassisSubsytem extends SubsystemBase {
     drive.arcadeDrive(rotation, speed);
   }
 
+  public void spin(double speed) {
+    this.move(0, speed);
+  }
+
   @Override
   public void periodic() {
     // This method will be called once per scheduler run

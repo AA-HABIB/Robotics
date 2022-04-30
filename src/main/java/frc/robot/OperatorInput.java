@@ -2,12 +2,13 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.button.Button;
+import frc.robot.Commands.LimelightFollowCommand;
 
 public class OperatorInput {
     public XboxController controller1;
     public XboxController controller2;
 
-    Button intakePistonButton;
+    Button limeButton;
 
 
     public OperatorInput(){
@@ -18,6 +19,11 @@ public class OperatorInput {
     public boolean getCont1A(){
         return controller1.getAButtonPressed();
     }
+
+    public boolean getCont1B(){
+        return controller1.getBButton();
+    }
+
     public double getSpeed(){
         return -controller1.getLeftY();
     }
